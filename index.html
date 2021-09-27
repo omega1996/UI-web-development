@@ -1,70 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <style>
-        .container{
-            width: 950px;
-            margin: auto;
-            height: 100%;
-            font-family: sans-serif;
-            /* background-color: red; */
-        }
-        .nav-items{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid black;
-        }
-        a{
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .navigation{
-            height: 90px;
-        }
-        .name-and-photo{
-            height: 670px;
-        }
-        .about{
-            background-color: #F6F6F6; 
-            height: 500px;
-        }
-        .skills{
-            height:610px;
-        }
-    </style>
-    <div class="navigation">
-        <div class="container nav-items">
-            <a href="http://google.com">Home</a>
-            <a href="second">About me</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Porfolio</a>
-            <a href="">Contacts</a>
-        </div>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    </div>
-    <div class="name-and-photo" >
-        <div class="container" >
-            <div>
-                Ivan Riazanov
-            </div>
-            
-        </div>
-    </div>
-    <div class="about">
-        <div class="container">
-            Hi, I'm Ivan
-        </div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://i2.wp.com/apptractor.ru/wp-content/uploads/2014/01/bootstrap.png?fit=300%2C300&ssl=1" width="30" height="30" class="d-inline-block align-top" alt="">
+            MNIST
+        </a>
         
+        </nav>
+        <h1 class="mt-5">Number classification</h1>
+        <div class="mt-5 row justify-content-between">
+            <div class="col col-lg-10">
+        <div class="input-group mb-3">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile01">
+                <label class="custom-file-label" for="inputGroupFile01">Your file...</label>
+            </div>
+        </div>
     </div>
-    <div class="skills" id="skills">Skills</div>
-    <div class="portfolio" id='portfolio' style="background-color: #F6F6F6; height: 2253px;">My sites</div>
-    <div class="contacts" style="height: 600px;">Contacts</div>
-</body>
+    <div class="col col-lg-2 ">
+        <button type="button" class="btn float-right btn-primary">Process</button></div>
+    </div>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
