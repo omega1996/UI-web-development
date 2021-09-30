@@ -24,14 +24,14 @@
 
     </nav>
     <h1 class="mt-5">Number classification</h1>
-    <form action="/cgi-bin/result.py">
+    <form action="/cgi-bin/result.py" method="post"  enctype="multipart/form-data">
       <div class="mt-5 row justify-content-between">
 
         <div class="col col-lg-10">
 
           <div class="input-group mb-3">
             <div class="custom-file">
-              <input type="file" class="form-control-file" id="inputGroupFile01">
+              <input type="file" class="form-control-file" name="image" id="inputGroupFile01">
               <label class="custom-file-label" for="inputGroupFile01">Your file...</label>
             </div>
             <script> 
