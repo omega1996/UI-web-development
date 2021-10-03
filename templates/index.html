@@ -9,14 +9,14 @@ MNIST classification
 {% endblock %}
 
 {% block content %}
-<form action="/">
+<form action="/process" method="POST" enctype="multipart/form-data">
     <div class="row justify-content-between">
 
       <div class="col col-lg-10">
 
         <div class="input-group mb-3">
           <div class="custom-file">
-            <input type="file" class="form-control-file" accept="image/*" id="inputGroupFile01">
+            <input type="file" class="form-control-file" accept="image/*" name="image" id="inputGroupFile01">
             <label class="custom-file-label" for="inputGroupFile01">Your file...</label>
           </div>
           <script> 
