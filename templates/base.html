@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% block head %}
     <meta charset="UTF-8">
     {{ bootstrap.load_css() }}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={{ url_for("static", filename='index.css') }}/>
+    <link rel="stylesheet" href={{ url_for("static", filename='index.css' ) }} />
     <title>{% block title %}{% endblock %}</title>
     {% endblock %}
 </head>
+
 <body>
-    <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer">
-        {% block footer %}
-        {% endblock %}
+    <div class="container">
+        <div id="nav">
+            {% block navbar %}
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                  <img src="https://i2.wp.com/apptractor.ru/wp-content/uploads/2014/01/bootstrap.png?fit=300%2C300&ssl=1"
+                    width="30" height="30" class="d-inline-block align-top" alt="">
+                  MNIST
+                </a>
+          
+              </nav>
+              {% endblock %}
+        </div>
+        <div id="title"><h1 class="mt-5 mb-5">{% block header %} {% endblock %}</h1></div>
+        <div id="content">{% block content %}{% endblock %}</div>
+        <div id="footer">
+            {% block footer %}
+            {% endblock %}
+        </div>
     </div>
     {{ bootstrap.load_js() }}
 </body>
+
 </html>

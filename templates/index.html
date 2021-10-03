@@ -1,14 +1,37 @@
 {% extends "base.html" %}
 
-{% block content %}
-    {% if name %}
-    <p>Hello, {{name}}</p>
-    {% else %}
-    <p>Hello, what is your name?</p>
-    {% endif %}
+{% block title %}
+MNIST classification
+{% endblock %}
 
-    <form action="/">
-        <input type="text" name="username">
-        <input type="submit" class="btn btn-primary" value="send">
-    </form>
+{% block header %}
+MNIST classification
+{% endblock %}
+
+{% block content %}
+<form action="/">
+    <div class="row justify-content-between">
+
+      <div class="col col-lg-10">
+
+        <div class="input-group mb-3">
+          <div class="custom-file">
+            <input type="file" class="form-control-file" accept="image/*" id="inputGroupFile01">
+            <label class="custom-file-label" for="inputGroupFile01">Your file...</label>
+          </div>
+          <script> 
+          document.querySelector('.form-control-file').addEventListener('change',function(e){
+            var fileName = document.getElementById("inputGroupFile01").files[0].name;
+            var nextSibling = e.target.nextElementSibling
+            nextSibling.innerText = fileName
+          })
+          </script>
+        </div>
+      </div>
+      <div class="col col-lg-2 ">
+        <button type="submit" class="btn float-right btn-primary">Process</button>
+      </div>
+
+    </div>
+  </form>
 {% endblock %}
