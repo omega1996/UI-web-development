@@ -3,6 +3,7 @@
 <head>
     {% block head %}
     <meta charset="UTF-8">
+    {{ bootstrap.load_css() }}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href={{ url_for("static", filename='index.css') }}/>
@@ -15,5 +16,6 @@
         {% block footer %}
         {% endblock %}
     </div>
+    {{ bootstrap.load_js() }}
 </body>
 </html>
